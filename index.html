@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aydın İncekara | Dijital Portfolyo</title>
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #202124;
+            --accent-color: #5f6368;
+            --bg-color: #ffffff;
+            --section-bg: #f8f9fa;
+            --text-color: #3c4043;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1557b0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--section-bg);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-note {
+            background: #fff3cd;
+            padding: 1rem;
+            border-left: 5px solid #ffc107;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Aydın İncekara</a>
+            <ul class="nav-links">
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#yetkinlikler">Yetkinlikler</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Aydın İncekara</h1>
+        <p>Bölüm Başkanı | Teknoloji Eğitmeni | Endüstriyel Tasarımcı</p>
+        <p>12 yıllık tecrübe ile yazılım, tasarım ve üretim teknolojilerini pedagoji ile birleştiriyorum.</p>
+        <a href="#projeler" class="btn">Projelerimi İnceleyin</a>
+    </section>
+
+    <section id="hakkimda">
+        <h2>Hakkımda</h2>
+        <div class="social-note">
+            "Profesyonel odağımı ve üretim sürecimi korumak adına sosyal medya platformlarını aktif olarak kullanmamaktayım. Çalışmalarımın detaylarına bu portfolyo üzerinden ulaşabilirsiniz."
+        </div>
+        <p>
+            Son 12 yıldır özel gereksinimli bireylerden üstün yetenekli öğrencilere kadar çok geniş bir yelpazede teknoloji eğitimleri verdim. 
+            Eğitim felsefem, <strong>"Yaparak Öğrenme"</strong> üzerine kuruludur. Katılımcıların sadece tüketici değil, dijital dünyanın aktif üreticileri olmalarını sağlamak için 
+            Unity, Unreal Engine ve 3D üretim teknolojilerini müfredatlarıma entegre ediyorum.
+        </p>
+    </section>
+
+    <section id="yetkinlikler" style="background-color: var(--section-bg); max-width: 100%;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <h2>Teknik Yetkinlikler</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Yazılım & Oyun Geliştirme</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Unity (2D/3D/XR)</span>
+                        <span class="skill-tag">Unreal Engine</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Cisco CCNA</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>3D Tasarım & Üretim</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Blender</span>
+                        <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">3D Yazıcı & Tarayıcı</span>
+                        <span class="skill-tag">3D Kalem</span>
+                        <span class="skill-tag">Endüstriyel Tasarım</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Eğitim & Güvenlik</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">Pedagojik Formasyon</span>
+                        <span class="skill-tag">Siber Güvenlik</span>
+                        <span class="skill-tag">Müfredat Geliştirme</span>
+                        <span class="skill-tag">Proje Yönetimi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projeler">
+        <h2>Öne Çıkan Projeler</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>WebAR Dijital Kültür Sergisi</h3>
+                <p>Aşık Veysel ve Barış Manço gibi değerlerimizi Web tabanlı Artırılmış Gerçeklik ile dijital dünyaya taşıyan interaktif sergi projesi.</p>
+            </div>
+            <div class="card">
+                <h3>Karanlık İstasyon</h3>
+                <p>Unity oyun motoru ve C# kullanılarak geliştirilen, hayatta kalma temalı profesyonel 3D oyun projesi.</p>
+            </div>
+            <div class="card">
+                <h3>AFİ (AR Eğitim Uygulaması)</h3>
+                <p>Okul öncesi çocukların bilişsel gelişimi için tasarlanmış, artırılmış gerçeklik destekli eğitim materyali.</p>
+            </div>
+            <div class="card">
+                <h3>JARVIS-X PRO MAX</h3>
+                <p>Python tabanlı, gerçek zamanlı sesli asistan ve yapay zeka eğitim arayüzü.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <h2>İletişim</h2>
+        <p>Projelerim ve eğitim programlarım hakkında detaylı bilgi almak için bana ulaşabilirsiniz.</p>
+        <div style="margin-top: 1.5rem;">
+            <p><strong>E-posta:</strong> [E-posta Adresiniz Buraya]</p>
+            <p><strong>Konum:</strong> İstanbul</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Aydın İncekara. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
