@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aydın İncekara | Dijital Portfolyo</title>
+    <title>Aydın İNCEKARA | Dijital Portfolyo</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #1a73e8;
@@ -14,13 +15,18 @@
             --section-bg: #f8f9fa;
             --text-color: #3c4043;
             --white: #ffffff;
+            --hover-color: #e8f0fe;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Google Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -30,8 +36,9 @@
         }
 
         header {
-            background: var(--white);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
@@ -39,7 +46,7 @@
         }
 
         nav {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 1rem 2rem;
             display: flex;
@@ -48,10 +55,15 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--secondary-color);
             text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
         }
 
         .nav-links {
@@ -67,6 +79,7 @@
             text-decoration: none;
             color: var(--text-color);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
 
@@ -75,8 +88,8 @@
         }
 
         section {
-            padding: 5rem 2rem;
-            max-width: 1100px;
+            padding: 6rem 2rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -87,116 +100,186 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+            background: radial-gradient(circle at center, #fdfdfd 0%, #f1f3f4 100%);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--secondary-color);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             color: var(--accent-color);
-            max-width: 700px;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        .contact-fast {
+            display: flex;
+            gap: 1.5rem;
             margin-bottom: 2rem;
+        }
+
+        .contact-fast a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .contact-fast a:hover {
+            color: var(--primary-color);
         }
 
         .btn {
             display: inline-block;
             background: var(--primary-color);
             color: var(--white);
-            padding: 0.75rem 2rem;
-            border-radius: 5px;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
             text-decoration: none;
-            transition: background 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(26, 115, 232, 0.3);
+            transition: all 0.3s;
         }
 
         .btn:hover {
             background: #1557b0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
         }
 
         h2 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 10px;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
+        h2 i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            transition: transform 0.3s;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .card i.main-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
         }
 
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.6rem;
+            margin-top: 1.2rem;
         }
 
         .skill-tag {
-            background: var(--section-bg);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid #ddd;
-        }
-
-        .project-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-item h3 {
+            background: var(--hover-color);
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
 
         .social-note {
-            background: #fff3cd;
-            padding: 1rem;
-            border-left: 5px solid #ffc107;
+            background: #f1f3f4;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 6px solid var(--primary-color);
             margin-bottom: 2rem;
-            font-style: italic;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-note i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-item p {
+            font-size: 0.95rem;
+            color: var(--accent-color);
         }
 
         footer {
             background: var(--secondary-color);
             color: var(--white);
+            padding: 4rem 2rem;
             text-align: center;
-            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-contact {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-contact a {
+            color: #bdc1c6;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: color 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: var(--white);
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem; }
             .nav-links { display: none; }
+            .footer-contact { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -204,7 +287,7 @@
 
     <header>
         <nav>
-            <a href="#" class="logo">Aydın İncekara</a>
+            <a href="#" class="logo">Aydın <span>İNCEKARA</span></a>
             <ul class="nav-links">
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#yetkinlikler">Yetkinlikler</a></li>
@@ -215,55 +298,63 @@
     </header>
 
     <section class="hero">
-        <h1>Aydın İncekara</h1>
-        <p>Bölüm Başkanı | Teknoloji Eğitmeni | Endüstriyel Tasarımcı</p>
-        <p>12 yıllık tecrübe ile yazılım, tasarım ve üretim teknolojilerini pedagoji ile birleştiriyorum.</p>
-        <a href="#projeler" class="btn">Projelerimi İnceleyin</a>
+        <h1>Aydın İNCEKARA</h1>
+        <p>Teknoloji Eğitmeni | Endüstriyel Tasarımcı</p>
+        <div class="contact-fast">
+            <a href="mailto:aydinincekara@gmail.com"><i class="fas fa-envelope"></i> aydinincekara@gmail.com</a>
+            <a href="tel:05444415859"><i class="fas fa-phone"></i> 0544 441 58 59</a>
+        </div>
+        <a href="#projeler" class="btn">Atölye ve Projeleri İncele</a>
     </section>
 
     <section id="hakkimda">
-        <h2>Hakkımda</h2>
+        <h2><i class="fas fa-user-circle"></i> Hakkımda</h2>
         <div class="social-note">
-            "Profesyonel odağımı ve üretim sürecimi korumak adına sosyal medya platformlarını aktif olarak kullanmamaktayım. Çalışmalarımın detaylarına bu portfolyo üzerinden ulaşabilirsiniz."
+            <i class="fas fa-info-circle"></i>
+            <p>Profesyonel odak ve üretim sürekliliği adına sosyal medya platformlarını aktif olarak kullanmamaktayım. Tüm güncel çalışmalarıma buradan ulaşabilirsiniz.</p>
         </div>
-        <p>
-            Son 12 yıldır özel gereksinimli bireylerden üstün yetenekli öğrencilere kadar çok geniş bir yelpazede teknoloji eğitimleri verdim. 
-            Eğitim felsefem, <strong>"Yaparak Öğrenme"</strong> üzerine kuruludur. Katılımcıların sadece tüketici değil, dijital dünyanın aktif üreticileri olmalarını sağlamak için 
-            Unity, Unreal Engine ve 3D üretim teknolojilerini müfredatlarıma entegre ediyorum.
+        <p style="font-size: 1.1rem; text-align: justify;">
+            12 yılı aşkın süredir teknoloji eğitimleri alanında, her seviyeden öğrenci kitlesiyle (özel gereksinimli bireylerden üstün yetenekli dâhilere kadar) 
+            birebir üretim süreçleri yönetiyorum. Eğitim yaklaşımım <strong>"Yapılandırmacılık"</strong> felsefesine dayanır; öğrencilerin sadece 
+            kod yazmasını değil, 3D dünyalar inşa etmesini ve fiziksel ürünler tasarlamasını hedeflerim.
         </p>
     </section>
 
     <section id="yetkinlikler" style="background-color: var(--section-bg); max-width: 100%;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            <h2>Teknik Yetkinlikler</h2>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2><i class="fas fa-tools"></i> Teknik Yetkinlikler</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Yazılım & Oyun Geliştirme</h3>
+                    <i class="fas fa-gamepad main-icon"></i>
+                    <h3>Oyun & Sanal Gerçeklik</h3>
+                    <p>Unity ve Unreal Engine platformlarında interaktif dünyalar ve XR deneyimleri.</p>
                     <div class="skills-container">
                         <span class="skill-tag">Unity (2D/3D/XR)</span>
                         <span class="skill-tag">Unreal Engine</span>
                         <span class="skill-tag">C#</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Cisco CCNA</span>
+                        <span class="skill-tag">UI Tasarımı</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>3D Tasarım & Üretim</h3>
+                    <i class="fas fa-drafting-compass main-icon"></i>
+                    <h3>Tasarım & Üretim</h3>
+                    <p>Fikir aşamasından fiziksel ürüne; 3D modelleme ve katmanlı üretim teknolojileri.</p>
                     <div class="skills-container">
-                        <span class="skill-tag">Blender</span>
                         <span class="skill-tag">Fusion 360</span>
+                        <span class="skill-tag">Blender</span>
                         <span class="skill-tag">3D Yazıcı & Tarayıcı</span>
                         <span class="skill-tag">3D Kalem</span>
-                        <span class="skill-tag">Endüstriyel Tasarım</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Eğitim & Güvenlik</h3>
+                    <i class="fas fa-code main-icon"></i>
+                    <h3>Yazılım & Güvenlik</h3>
+                    <p>Veri işleme, otomasyon ve ağ güvenliği odaklı teknik çözümler.</p>
                     <div class="skills-container">
-                        <span class="skill-tag">Pedagojik Formasyon</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Cisco CCNA</span>
                         <span class="skill-tag">Siber Güvenlik</span>
-                        <span class="skill-tag">Müfredat Geliştirme</span>
-                        <span class="skill-tag">Proje Yönetimi</span>
+                        <span class="skill-tag">Ağ Güvenliği</span>
                     </div>
                 </div>
             </div>
@@ -271,38 +362,46 @@
     </section>
 
     <section id="projeler">
-        <h2>Öne Çıkan Projeler</h2>
+        <h2><i class="fas fa-rocket"></i> Öne Çıkan Projeler</h2>
         <div class="grid">
             <div class="card">
-                <h3>WebAR Dijital Kültür Sergisi</h3>
-                <p>Aşık Veysel ve Barış Manço gibi değerlerimizi Web tabanlı Artırılmış Gerçeklik ile dijital dünyaya taşıyan interaktif sergi projesi.</p>
+                <i class="fas fa-vr-cardboard main-icon" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                <h3>WebAR Kültür Sergisi</h3>
+                <p>Kültürel değerlerimizi Artırılmış Gerçeklik (WebAR) ile tarayıcı üzerinden deneyimlenebilir kılan dijital sergi.</p>
             </div>
             <div class="card">
+                <i class="fas fa-ghost main-icon" style="font-size: 1.8rem; color: var(--accent-color);"></i>
                 <h3>Karanlık İstasyon</h3>
-                <p>Unity oyun motoru ve C# kullanılarak geliştirilen, hayatta kalma temalı profesyonel 3D oyun projesi.</p>
+                <p>Unity ve C# altyapısıyla geliştirilen, atmosferik 3D hayatta kalma (survival horror) oyunu.</p>
             </div>
             <div class="card">
-                <h3>AFİ (AR Eğitim Uygulaması)</h3>
-                <p>Okul öncesi çocukların bilişsel gelişimi için tasarlanmış, artırılmış gerçeklik destekli eğitim materyali.</p>
+                <i class="fas fa-child main-icon" style="font-size: 1.8rem; color: var(--accent-color);"></i>
+                <h3>AFİ (AR Eğitim)</h3>
+                <p>Okul öncesi eğitimde interaktif öğrenmeyi destekleyen, artırılmış gerçeklik tabanlı mobil uygulama.</p>
             </div>
             <div class="card">
+                <i class="fas fa-robot main-icon" style="font-size: 1.8rem; color: var(--accent-color);"></i>
                 <h3>JARVIS-X PRO MAX</h3>
-                <p>Python tabanlı, gerçek zamanlı sesli asistan ve yapay zeka eğitim arayüzü.</p>
+                <p>Yapay zeka asistanı ve gerçek zamanlı sesli etkileşim sistemleri üzerine geliştirilen AR-GE çalışması.</p>
             </div>
         </div>
     </section>
 
-    <section id="iletisim">
-        <h2>İletişim</h2>
-        <p>Projelerim ve eğitim programlarım hakkında detaylı bilgi almak için bana ulaşabilirsiniz.</p>
-        <div style="margin-top: 1.5rem;">
-            <p><strong>E-posta:</strong> [E-posta Adresiniz Buraya]</p>
-            <p><strong>Konum:</strong> İstanbul</p>
-        </div>
-    </section>
+    <footer id="iletisim">
+        <div class="footer-content">
+            <h2 style="color: var(--white); justify-content: center; border-bottom: none;"><i class="fas fa-paper-plane" style="color: var(--white);"></i> İletişime Geçin</h2>
+            <p style="color: #bdc1c6; margin-bottom: 2.5rem;">Atölye çalışmaları ve projeler için bana ulaşabilirsiniz.</p>
+            
+            <div class="footer-contact">
+                <a href="mailto:aydinincekara@gmail.com"><i class="fas fa-envelope"></i> aydinincekara@gmail.com</a>
+                <a href="tel:05444415859"><i class="fas fa-phone"></i> 0544 441 58 59</a>
+                <a href="#"><i class="fas fa-location-dot"></i> İstanbul, Türkiye</a>
+            </div>
 
-    <footer>
-        <p>&copy; 2024 Aydın İncekara. Tüm Hakları Saklıdır.</p>
+            <div style="border-top: 1px solid #3c4043; padding-top: 2rem; font-size: 0.85rem; color: #80868b;">
+                &copy; 2024 Aydın İNCEKARA | Dijital Portfolyo
+            </div>
+        </div>
     </footer>
 
 </body>
