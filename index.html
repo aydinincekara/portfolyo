@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aydın İNCEKARA | Teknoloji Eğitmeni & Endüstriyel Tasarımcı</title>
+    <title>Aydın İNCEKARA | Teknoloji Eğitmeni</title>
     <!-- Font Awesome Ikon Seti -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1a73e8;
-            --secondary-color: #202124;
-            --accent-color: #5f6368;
+            --primary-color: #0d47a1;
+            --secondary-color: #1a237e;
+            --accent-color: #455a64;
             --bg-color: #ffffff;
-            --section-bg: #f8f9fa;
-            --text-color: #3c4043;
+            --section-bg: #f4f7f9;
+            --text-color: #263238;
             --white: #ffffff;
-            --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --card-shadow: 0 12px 40px rgba(0,0,0,0.06);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         html {
@@ -30,16 +30,16 @@
         }
 
         body {
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-color);
             background-color: var(--bg-color);
         }
 
         /* Navigasyon */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
             position: fixed;
             width: 100%;
             top: 0;
@@ -49,19 +49,19 @@
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-size: 1.6rem;
+            font-weight: 900;
             color: var(--secondary-color);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .logo span {
@@ -74,15 +74,15 @@
         }
 
         .nav-links li {
-            margin-left: 2rem;
+            margin-left: 2.5rem;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-color);
             font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: all 0.3s;
         }
 
         .nav-links a:hover {
@@ -98,56 +98,55 @@
             align-items: center;
             text-align: center;
             padding: 0 2rem;
-            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(241, 243, 244, 0.9)), 
-                        url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background: linear-gradient(rgba(255, 255, 255, 0.88), rgba(244, 247, 249, 0.92)), 
+                        url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
             background-size: cover;
             background-attachment: fixed;
         }
 
         .hero h1 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             color: var(--secondary-color);
             margin-bottom: 0.5rem;
             font-weight: 900;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            color: var(--accent-color);
+            font-size: 1.8rem;
+            color: var(--primary-color);
             margin-bottom: 2.5rem;
-            font-weight: 500;
-            max-width: 800px;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
 
-        .contact-info {
+        .contact-fast {
             display: flex;
             gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            justify-content: center;
+            margin-bottom: 3.5rem;
         }
 
-        .contact-info a {
+        .contact-fast a {
             text-decoration: none;
-            color: var(--secondary-color);
+            color: var(--text-color);
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 0.8rem;
             background: var(--white);
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            padding: 0.9rem 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
         }
 
-        .contact-info a:hover {
-            transform: translateY(-3px);
+        .contact-fast a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             color: var(--primary-color);
         }
 
-        /* Bölümler */
+        /* Hakkımda & Multi-Disiplin */
         section {
             padding: 8rem 2rem;
             max-width: 1200px;
@@ -156,34 +155,38 @@
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 3.5rem;
             color: var(--secondary-color);
             display: flex;
             align-items: center;
             gap: 1.2rem;
+            font-weight: 800;
         }
 
         h2 i {
             color: var(--primary-color);
+            font-size: 2rem;
         }
 
-        .social-disclaimer {
-            background: #eef4ff;
+        .about-text {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-align: justify;
+            max-width: 1000px;
+            margin-bottom: 3rem;
+        }
+
+        .social-note {
+            background: #fdfdfd;
             padding: 2rem;
             border-radius: 15px;
             border-left: 8px solid var(--primary-color);
-            margin-bottom: 4rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+            box-shadow: var(--card-shadow);
+            margin-top: 3rem;
+            font-size: 1rem;
         }
 
-        .social-disclaimer i {
-            font-size: 2rem;
-            color: var(--primary-color);
-        }
-
-        /* Grid Sistemi */
+        /* Uzmanlık Grid */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -192,41 +195,36 @@
 
         .card {
             background: var(--white);
-            padding: 3rem;
-            border-radius: 20px;
+            padding: 3.5rem;
+            border-radius: 24px;
             box-shadow: var(--card-shadow);
-            border: 1px solid #f0f0f0;
+            border: 1px solid #f0f4f8;
             transition: all 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             border-color: var(--primary-color);
         }
 
         .card i.main-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--primary-color);
             margin-bottom: 2rem;
             display: block;
         }
 
         .card h3 {
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             margin-bottom: 1.2rem;
             color: var(--secondary-color);
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.7rem;
+            margin-top: 1.5rem;
         }
 
         .tag {
@@ -235,7 +233,7 @@
             padding: 0.5rem 1.2rem;
             border-radius: 10px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .tag.special {
@@ -243,36 +241,48 @@
             color: var(--white);
         }
 
-        /* Footer */
-        footer {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
+        /* Mentörlük & Organizasyon */
+        .feature-list {
+            list-style: none;
+            margin-top: 1.5rem;
         }
 
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 2rem;
-            display: block;
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-list li i {
+            color: var(--primary-color);
+            margin-top: 0.3rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1021;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 4rem;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: #9aa0a6;
+            color: #90a4ae;
             text-decoration: none;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            font-size: 1.1rem;
+            gap: 1rem;
             transition: color 0.3s;
         }
 
@@ -281,10 +291,10 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.2rem; }
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.3rem; }
             .nav-links { display: none; }
-            .contact-info { flex-direction: column; gap: 1rem; }
+            .contact-fast { flex-direction: column; gap: 1rem; }
         }
     </style>
 </head>
@@ -294,9 +304,9 @@
         <nav>
             <a href="#" class="logo">Aydın <span>İNCEKARA</span></a>
             <ul class="nav-links">
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#yetkinlikler">Yetkinlikler</a></li>
-                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#vizyon">Vizyon</a></li>
+                <li><a href="#uzmanlik">Uzmanlık Alanları</a></li>
+                <li><a href="#robotik">Robotik & Mentörlük</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
@@ -304,34 +314,46 @@
 
     <section class="hero">
         <h1>Aydın İNCEKARA</h1>
-        <p>Teknoloji Eğitmeni | Endüstriyel Tasarımcı</p>
-        <div class="contact-info">
+        <p>Teknoloji Eğitmeni</p>
+        <div class="contact-fast">
             <a href="mailto:aydinincekara@gmail.com"><i class="fas fa-envelope"></i> aydinincekara@gmail.com</a>
             <a href="tel:05444415859"><i class="fas fa-phone"></i> 0544 441 58 59</a>
         </div>
-        <a href="#projeler" style="text-decoration: none; color: white; background: var(--primary-color); padding: 1.2rem 3rem; border-radius: 50px; font-weight: bold; box-shadow: 0 10px 20px rgba(26,115,232,0.2);">Çalışmaları Keşfet</a>
+        <a href="#robotik" style="text-decoration: none; color: white; background: var(--primary-color); padding: 1.3rem 3.5rem; border-radius: 50px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 10px 30px rgba(13, 71, 161, 0.3);">Deneyimi Keşfet</a>
     </section>
 
-    <section id="hakkimda">
-        <h2><i class="fas fa-user-tie"></i> Vizyon ve Pedagoji</h2>
-        <div class="social-disclaimer">
-            <i class="fas fa-shield-halved"></i>
-            <p><strong>Önemli Not:</strong> Profesyonel odak ve üretim sürekliliğini önceliklendirdiğim için sosyal medya platformlarını aktif olarak kullanmamaktayım. Tüm dijital varlığım ve güncel projelerim bu portfolyo üzerinden takip edilebilir.</p>
+    <section id="vizyon">
+        <h2><i class="fas fa-microchip"></i> Multi-Disipliner Eğitim Vizyonu</h2>
+        <div class="about-text">
+            <p>
+                12 yılı aşkın süredir teknoloji dünyasının farklı katmanlarını pedagoji ile birleştiren bir yaklaşım benimsiyorum. 
+                Elektronik donanım mimarilerinden siber güvenliğe, kompleks yazılım mühendisliği prensiplerinden veri işleme süreçlerine kadar 
+                geniş bir teknik spektrumda edindiğim birikimi, eğitim odaklı bir modelle sunmaktayım. 
+            </p>
+            <br>
+            <p>
+                Geliştirdiğim eğitim modellerinde; zihinsel ve bedensel engelli bireylerden üstün yetenekli öğrencilere kadar her seviyedeki katılımcıya, 
+                teknolojiyi sadece tüketen değil, onun mimarisini anlayan ve dönüştüren bir bakış açısı kazandırıyorum. Yazılımın analitik derinliğini, 
+                elektroniğin fiziksel üretimiyle ve siber güvenliğin savunma disipliniyle harmanlayarak bütünsel bir teknoloji okuryazarlığı inşa ediyorum.
+            </p>
         </div>
-        <p style="font-size: 1.2rem; text-align: justify; color: var(--accent-color);">
-            12 yılı aşkın süredir, zihinsel ve bedensel engelli bireylerden üstün yetenekli dâhilere kadar çok geniş bir kitleye tasarım, yazılım ve üretim teknolojileri üzerine eğitimler verdim. 
-            <strong>"Yaparak Öğrenme"</strong> modelini temel alan atölye süreçlerimde, katılımcıların sadece kod yazmasını değil; Yapay Zeka, Artırılmış Gerçeklik ve 3D teknolojileri kullanarak fiziksel ve dijital dünyayı birleştiren çözümler üretmesini sağlıyorum.
-        </p>
+        <div class="social-note">
+            <i class="fas fa-search" style="color: var(--primary-color); margin-right: 10px;"></i>
+            Profesyonel odaklanma ve üretim disiplinini önceliklendirdiğim için sosyal medya platformlarını aktif bir paylaşım alanı olarak kullanmıyorum; 
+            ancak küresel teknolojik trendleri takip etmek ve derinlemesine araştırma süreçlerimi yönetmek amacıyla bu mecralardaki varlığımı sürdürmekteyim.
+        </div>
     </section>
 
-    <section id="yetkinlikler" style="background-color: var(--section-bg); max-width: 100%;">
+    <section id="uzmanlik" style="background-color: var(--section-bg); max-width: 100%;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2><i class="fas fa-brain"></i> Teknik Uzmanlık</h2>
+            <h2><i class="fas fa-layer-group"></i> Teknik Derinlik</h2>
             <div class="grid">
+                
+                <!-- Yazılım ve Algoritma -->
                 <div class="card">
-                    <i class="fas fa-laptop-code main-icon"></i>
+                    <i class="fas fa-code main-icon"></i>
                     <h3>Yazılım & Yapay Zeka</h3>
-                    <p>Karmaşık algoritma tasarımı ve akıllı sistem entegrasyonu odaklı geliştirme süreçleri.</p>
+                    <p>Uçtan uca sistem mimarileri, akıllı algoritma tasarımları ve modern programlama dilleriyle çözüm üretme kapasitesi.</p>
                     <div class="tags">
                         <span class="tag special">Yapay Zeka (AI)</span>
                         <span class="tag">C++</span>
@@ -341,23 +363,13 @@
                     </div>
                 </div>
 
+                <!-- Elektronik ve Prototipleme -->
                 <div class="card">
-                    <i class="fas fa-vr-cardboard main-icon"></i>
-                    <h3>Gelecek Teknolojileri (XR)</h3>
-                    <p>Fiziksel gerçekliği dijital dünya ile harmanlayan interaktif deneyimler ve oyun motoru mimarileri.</p>
+                    <i class="fas fa-tools main-icon"></i>
+                    <h3>Elektronik & Üretim</h3>
+                    <p>Hobi CNC uygulamalarından 3D prototiplemeye, donanım tasarımı ve katmanlı üretim ekosistemlerinin yönetimi.</p>
                     <div class="tags">
-                        <span class="tag special">Artırılmış Gerçeklik (AR)</span>
-                        <span class="tag">Sanal Gerçeklik (VR)</span>
-                        <span class="tag">Unity (2D/3D)</span>
-                        <span class="tag">Unreal Engine</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <i class="fas fa-print main-icon"></i>
-                    <h3>Tasarım & Prototipleme</h3>
-                    <p>Endüstriyel tasarım vizyonuyla, fikirlerin 3 boyutlu dünyada fiziksel objelere dönüşme yolculuğu.</p>
-                    <div class="tags">
+                        <span class="tag">Hobi CNC</span>
                         <span class="tag">Fusion 360</span>
                         <span class="tag">Blender</span>
                         <span class="tag">3D Yazıcı & Tarayıcı</span>
@@ -365,50 +377,61 @@
                     </div>
                 </div>
 
+                <!-- Ağ ve Siber Güvenlik -->
                 <div class="card">
-                    <i class="fas fa-network-wired main-icon"></i>
-                    <h3>Ağ Güvenliği & Donanım</h3>
-                    <p>Güvenli veri iletimi ve kurumsal ağ mimarileri üzerine profesyonel sertifikasyon destekli uzmanlık.</p>
+                    <i class="fas fa-shield-alt main-icon"></i>
+                    <h3>Ağ Güvenliği & Altyapı</h3>
+                    <p>Güvenli veri iletimi, ağ mimarilerinin planlanması ve siber savunma stratejileri üzerine uzmanlaşmış teknik yaklaşım.</p>
                     <div class="tags">
                         <span class="tag">Cisco CCNA</span>
-                        <span class="tag">Siber Güvenlik</span>
-                        <span class="tag">Donanım Tasarımı</span>
-                        <span class="tag">Ağ Mimarisi</span>
+                        <span class="tag">Ağ Güvenliği</span>
+                        <span class="tag">Siber Savunma</span>
+                        <span class="tag">Sistem Analizi</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="projeler">
-        <h2><i class="fas fa-lightbulb"></i> Öne Çıkan Çalışmalar</h2>
+    <section id="robotik">
+        <h2><i class="fas fa-robot"></i> Robotik Turnuvaları & Mentörlük</h2>
         <div class="grid">
-            <div class="card">
-                <i class="fas fa-cube main-icon"></i>
-                <h3>WebAR Kültür Sergisi</h3>
-                <p>Türkiye'nin kültürel miraslarını tarayıcı tabanlı Artırılmış Gerçeklik (WebAR) teknolojisiyle dijital ortama taşıyan proje.</p>
+            <div class="card" style="grid-column: span 1;">
+                <i class="fas fa-trophy main-icon"></i>
+                <h3>Yarışma Mentörlüğü</h3>
+                <p>Uluslararası standartlarda robotik turnuvaları için takım hazırlığı ve stratejik yönetim süreci.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> VEX IQ & VEX V5 Kategorileri</li>
+                    <li><i class="fas fa-check-circle"></i> Arduino & Raspberry Pi Tabanlı Çözümler</li>
+                    <li><i class="fas fa-check-circle"></i> Teknik Tasarım Defteri ve Strateji Geliştirme</li>
+                </ul>
             </div>
-            <div class="card">
-                <i class="fas fa-gamepad main-icon"></i>
-                <h3>Karanlık İstasyon</h3>
-                <p>Unity ve C# altyapısıyla geliştirilen, atmosferik ve mekanik derinliği yüksek profesyonel 3D hayatta kalma oyunu.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-microchip main-icon"></i>
-                <h3>JARVIS-X PRO MAX</h3>
-                <p>Yapay Zeka tabanlı, gerçek zamanlı sesli asistan ve interaktif yönetim sistemleri üzerine kurulu AR-GE çalışması.</p>
+
+            <div class="card" style="grid-column: span 1;">
+                <i class="fas fa-project-diagram main-icon"></i>
+                <h3>Organizasyon & Altyapı</h3>
+                <p>Kurum içi ve dışı teknoloji yarışmalarında teknik altyapı kurulumu ve organizasyonel destek.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Yarışma Teknik Altyapı Desteği</li>
+                    <li><i class="fas fa-check-circle"></i> Organizasyonel Süreç Yönetimi</li>
+                    <li><i class="fas fa-check-circle"></i> Hakemlik ve Teknik Değerlendirme</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <footer id="iletisim">
-        <div class="footer-logo">Aydın <span>İNCEKARA</span></div>
+        <div class="logo" style="color: white; margin-bottom: 2rem; font-size: 2.2rem;">Aydın <span>İNCEKARA</span></div>
+        <p style="color: #90a4ae; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+            Multi-disipliner teknoloji eğitimleri, mentörlük ve kurumsal projeler için profesyonel kanallar üzerinden iletişime geçebilirsiniz.
+        </p>
         <div class="footer-links">
             <a href="mailto:aydinincekara@gmail.com"><i class="fas fa-envelope"></i> aydinincekara@gmail.com</a>
             <a href="tel:05444415859"><i class="fas fa-phone"></i> 0544 441 58 59</a>
             <a href="#"><i class="fas fa-location-dot"></i> İstanbul, Türkiye</a>
         </div>
-        <p style="color: #5f6368; font-size: 0.9rem;">&copy; 2024 Tüm Hakları Saklıdır.</p>
+        <p style="color: #455a64; margin-top: 4rem; font-size: 0.9rem;">&copy; 2024 Tüm Hakları Saklıdır.</p>
     </footer>
 
 </body>
